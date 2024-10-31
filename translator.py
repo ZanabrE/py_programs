@@ -1,13 +1,19 @@
-def english_to_french(englishTxt1):#Naming my function as english_to_french
+def english_to_french(english_to_french):#Naming my function as english_to_french
     #Inside my function I can command to do anything in here.
-    print('Enter Hello to be translated in French: ')
-    englishTxt1 = input('')
-    print(englishTxt1 + ' translated to French is Bonjour.')
+    text1 = input('Enter Hello that will be transleted into French: ')
+    english = 'hello'
+    if text1 == english:
+        print('Hello translated to French is Bonjour.')
+    else:
+        print('Incorrect!')
     print('--------------------------------------------')
-    print('Enter Bonjour to be translated in English: ')
-    englishTxt1 = input('')
-    print(englishTxt1 + ' translated to English is Hello')
-english_to_french(englishTxt1='')#This will return the function.
+    text2 = input('Enter Bonjour to be translated in English: ')
+    french = 'bonjour'
+    if text2 == french:
+        print('Bonjour translated to English is Hello')
+    else:
+        print("Incorrect!")
+english_to_french(english_to_french='')#This will return the function.
 
 
 def english_to_german(englishTxt2):#Naming my function as english_to_german
