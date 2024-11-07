@@ -8,3 +8,17 @@
 #the object weighs more than 500 newtons, display a message indicating that it is too heavy.
 #If the object weighs less than 100 newtons, display a message indicating that it is too light.
 
+#User input
+mass = float(input("Enter an object's mass: "))
+
+#Calculations
+weight = mass * 9.8
+
+message = "The object "
+
+if weight < 100:
+    message += ' is too light ' + format(weight, ',.2f') + ' newtons'
+elif weight > 500:
+    message += ' is too heavy ' + format(weight, ',.2f') + ' newtons'
+    
+print(message)
