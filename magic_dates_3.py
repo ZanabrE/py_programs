@@ -23,4 +23,3 @@ print(message)
 #    print(month, '/',  day, '/', year, " that date is magic")
 #else:
 #    print(month, '/', day, '/', year, " that date is not magic")
-    
