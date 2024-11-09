@@ -12,38 +12,43 @@
 #the program should display the total points and the grade.
 
 message = ''
+
+#Calculations
+#total_score = test1 + test2 + exam
+
 #User input
-test1 = int(input("Enter points for test 1: "))
-#Conditions
+test1 = int(input("Enter the points for test 1: "))
 if test1 >= 0 and test1 <= 25:
-    test2 = int(input("Enter points for test 2: "))
+    test2 = int(input("Enter the points for test 2: "))
     
     if test2 >= 0 and test2 <= 25:
-        exam = int(input("Enter points for the exam: "))
+        exam = int(input("Enter the points for the exam: "))
         
-        if exam >= 0 and exam <= 50:
-            #Calculations
-            final_total = test1 + test2 + exam
+        if exam >= 0 or exam <= 50:
+            total_score = test1 + test2 + exam
             
-            if final_total < 50 or exam < 25:
-                message = 'Fail.'
-                
+            if total_score < 50 or exam < 25:
+                message = 'Fail'
+            
             else:
-                if final_total > 80:
+                if total_score > 80:
                     message = 'Distinction'
-                elif final_total > 60 or final_total < 80:
+                elif total_score <= 80 and total_score >= 60:
                     message = 'Credit'
-                elif final_total < 60:
+                elif total_score < 60:
                     message = 'Pass'
         else:
-            message = 'Invalid. Points for the exam is bettwen 0 - 50.'
+            message = 'Invalid. Points for the exam must be between 0 - 50.'
+            
     else:
-        message = 'Invalid. Points for test two is between 0 - 25.'
+        message = 'Invalid. Points for test 2 must be between 0 - 25.'
+    
 else:
-    message = 'Invalid. Points for test one is between 0 - 25.'
+    message = 'Invalid. Points for test 1 must be between 0 - 25.'
 
-print(message)   
-#print('Test 1 you have ', test1, 'points')
-#print('Test 2 you have ', test2, 'points')
-#print('Exam you have ', exam, 'points')
-#print('Your grade is '+ str(final_total) + '')
+print('Test 1 you have ' + test1 + 'points')
+print('Test 2 you have ' + test2 + 'points')
+print('Exam you have ' + exam + 'points')
+print('Your grade is '+ str(total_score) + ' points')
+
+print(message)
