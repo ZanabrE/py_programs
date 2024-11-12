@@ -12,8 +12,6 @@
 HOT_DOGS = 10
 HOT_DOGS_BUNS = 8
 
-message = ''
-
 number_of_people = int(input("How many people will be attending to the cookout: "))
 hot_dogs_per_person = int(input("How many hot dogs each person will be given: "))
 
