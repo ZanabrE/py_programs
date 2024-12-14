@@ -29,3 +29,17 @@
 #Here are your restaurant choices:
 #   Corner Cafe
 #   The Chef's Kitchen
+
+vegetarian = input('Is anyone in your party a vegetarian? ')
+
+if vegetarian == 'yes' or vegetarian == 'no':
+    vegan = input('Is anyone in your party a vegan? ')
+    
+    if vegan == 'yes' or vegan == 'no':
+        gluten_free = ('Is anyone in your party gluten-free? ')
+        
+        if gluten_free == 'yes' or gluten_free == 'no':
+            print('Here are the list of the restaurants.')
+else: 
+    print('Please enter a restaurant option.')
+    
