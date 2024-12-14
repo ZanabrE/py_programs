@@ -19,3 +19,32 @@
 #Did that fix the problem? no Enter
 #Get a new router.
 
+print('Please follow the following troubleshooting steps \n' +
+      'if you experience a bad Wi-Fi connection.')
+print('Reboot the computer and try to connect again. \n')
+steps = input('Did that fix the problem? ')
+
+if steps == 'no' or steps == 'NO' or steps == 'n' or steps == 'N':
+    print('Reboot the router and try to connect.')
+    steps = input('Did that fix the problem? ')
+        
+    if steps == 'no' or steps == 'NO' or steps == 'n' or steps == 'N':
+        print('Make sure the cables between the router and modem are plugged in firmly.')
+        steps = input('Did the fix the problem? ')
+        
+        if steps == 'no' or steps == 'NO' or steps == 'n' or steps == 'N': 
+            print('Move the router to a new location.')
+            steps = input('Did the fix the problem? ')
+            
+            if steps == 'no' or steps == 'NO' or steps == 'n' or steps == 'N':
+                print('Get a new router.')
+            else:
+                print('The problem has been resolved no further actions.')
+        else:
+            print('The problem has been resolved no further actions.')
+    else:
+        print('The problem has been resolved no further actions.')
+else:
+    print('The problem has been resolved no further actions.')
+    
+
